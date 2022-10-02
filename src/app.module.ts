@@ -7,6 +7,7 @@ import { UserModule } from './modules/user/user.module';
 import { VendorModule } from './modules/vendor/vendor.module';
 import { VendorLocationModule } from './modules/vendorLocation/vendorLocation.module';
 import { PromotionsModule } from './modules/promotions/promotions.module';
+import { UsedPromotionsModule } from './modules/usedPromotions/usedPromotions.module';
 
 @Module({
   imports: [
@@ -27,7 +28,8 @@ import { PromotionsModule } from './modules/promotions/promotions.module';
     UserModule,
     VendorModule,
     VendorLocationModule,
-    PromotionsModule
+    PromotionsModule,
+    UsedPromotionsModule
   ],
   controllers: [AppController],
   providers: [AppService],
