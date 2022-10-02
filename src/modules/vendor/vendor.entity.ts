@@ -1,6 +1,7 @@
 import { IsNotEmpty } from "class-validator";
 import { type } from "os";
-import { Column, CreateDateColumn, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, RelationId, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinTable, ManyToMany, OneToMany, OneToOne, PrimaryGeneratedColumn, RelationId, UpdateDateColumn } from "typeorm";
+import { UserVendor } from '../user-vendor/user-vendor.entity';
 
 @Entity()
 export class Vendor{
@@ -23,4 +24,6 @@ export class Vendor{
     @UpdateDateColumn()
     updatedAt: Date;
 
+    @OneToMany(() => UserVendor, (uv) => uv.vendor)
+    userVendors: UserVendor[]
 }
