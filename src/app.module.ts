@@ -9,6 +9,7 @@ import { VendorLocationModule } from './modules/vendorLocation/vendorLocation.mo
 import { PromotionsModule } from './modules/promotions/promotions.module';
 import { UsedPromotionsModule } from './modules/usedPromotions/usedPromotions.module';
 import { TransactionModule } from './modules/transaction/transaction.module';
+import { UserVendorModule } from './modules/user-vendor/user-vendor.module';
 
 @Module({
   imports: [
@@ -31,7 +32,8 @@ import { TransactionModule } from './modules/transaction/transaction.module';
     VendorLocationModule,
     PromotionsModule,
     UsedPromotionsModule,
-    TransactionModule
+    TransactionModule,
+    UserVendorModule
   ],
   controllers: [AppController],
   providers: [AppService],
