@@ -6,6 +6,7 @@ import { join } from 'path';
 import { UserModule } from './modules/user/user.module';
 import { VendorModule } from './modules/vendor/vendor.module';
 import { VendorLocationModule } from './modules/vendorLocation/vendorLocation.module';
+import { PromotionsModule } from './modules/promotions/promotions.module';
 
 @Module({
   imports: [
@@ -25,7 +26,8 @@ import { VendorLocationModule } from './modules/vendorLocation/vendorLocation.mo
     }),
     UserModule,
     VendorModule,
-    VendorLocationModule
+    VendorLocationModule,
+    PromotionsModule
   ],
   controllers: [AppController],
   providers: [AppService],
