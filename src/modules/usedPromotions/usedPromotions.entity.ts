@@ -15,6 +15,7 @@ export class UsedPromotions{
     user: User
 
     @Column()
+    @IsNotEmpty()
     @RelationId((up: UsedPromotions) => up.user)
     userId: number;
 
@@ -22,6 +23,7 @@ export class UsedPromotions{
     promotion: Promotions
 
     @Column()
+    @IsNotEmpty()
     @RelationId((up: UsedPromotions) => up.promotion)
     promotionId: number;
 
@@ -29,6 +31,7 @@ export class UsedPromotions{
     vendorLocation: VendorLocation
 
     @Column()
+    @IsNotEmpty()
     @RelationId((up: UsedPromotions) => up.vendorLocation)
     vendorLocationId: number;
     

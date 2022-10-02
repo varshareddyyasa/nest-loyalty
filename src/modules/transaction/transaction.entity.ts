@@ -15,6 +15,7 @@ export class Transaction{
     user: User
 
     @Column()
+    @IsNotEmpty()
     @RelationId((up: Transaction) => up.user)
     userId: number;
 
@@ -22,6 +23,7 @@ export class Transaction{
     vendorLocation: VendorLocation
 
     @Column()
+    @IsNotEmpty()
     @RelationId((up: Transaction) => up.vendorLocation)
     vendorLocationId: number;
     

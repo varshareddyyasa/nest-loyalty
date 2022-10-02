@@ -15,6 +15,7 @@ export class UserVendor {
     user: User
 
     @Column()
+    @IsNotEmpty()
     @RelationId((uv: UserVendor) => uv.user)
     userId: number
 
@@ -22,6 +23,7 @@ export class UserVendor {
     vendor: Vendor
 
     @Column()
+    @IsNotEmpty()
     @RelationId((uv: UserVendor) => uv.vendor)
     vendorId: number;
 

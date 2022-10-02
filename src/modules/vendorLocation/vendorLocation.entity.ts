@@ -13,6 +13,7 @@ export class VendorLocation {
     vendor: Vendor
 
     @Column()
+    @IsNotEmpty()
     @RelationId((vl: VendorLocation) => vl.vendor)
     vendorId: number;
 
