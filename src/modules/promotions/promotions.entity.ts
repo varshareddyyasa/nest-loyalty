@@ -13,6 +13,7 @@ export class Promotions {
     vendor: Vendor
 
     @Column()
+    @IsNotEmpty()
     @RelationId((vl: Promotions) => vl.vendor)
     vendorId: number;
 
