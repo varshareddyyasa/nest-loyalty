@@ -17,9 +17,11 @@ export class VendorLocation {
     vendorId: number;
 
     @Column()
+    @IsNotEmpty()
     address: string;
 
     @Column()
+    @IsNotEmpty()
     phone: string;
 
     @CreateDateColumn()
