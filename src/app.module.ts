@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { UserModule } from './modules/user/user.module';
+import { VendorModule } from './modules/vendor/vendor.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { UserModule } from './modules/user/user.module';
         migrationsDir: "src/db/migration"
       }
     }),
-    UserModule
+    UserModule,
+    VendorModule
   ],
   controllers: [AppController],
   providers: [AppService],
