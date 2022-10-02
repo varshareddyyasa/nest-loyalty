@@ -22,9 +22,11 @@ export class User{
     phone: string;
 
     @Column()
+    @IsNotEmpty()
     emailId: string;
 
     @Column()
+    @IsNotEmpty()
     address: string;
 
     @CreateDateColumn()
