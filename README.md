@@ -58,6 +58,39 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Run as Docker Container
+
+This app connects to mssql db. Download and run mssql docker container with the following commands
+
+### Run MSSQL Docker container
+```
+sudo docker pull mcr.microsoft.com/mssql/server:2022-latest
+```
+
+```
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+   -p 1433:1433 --name sql1 --hostname sql1 \
+   -d \
+   mcr.microsoft.com/mssql/server:2022-latest
+```
+
+### Create a DB
+Create db called `Loyalty`
+
+### Build Docker Image
+
+Build Docker image with the following command
+
+```
+docker build -t nest-loyalty .
+```
+
+Run the app as docker container with the following command
+
+```
+docker run -p80:3001 nest-loyalty
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
